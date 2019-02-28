@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@types/verror": "^1.10.3",
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "debug": "^4.1.1",
+    "verror": "^1.10.0"
+  },
+  "name": "event-popper",
+  "description": "Update Event Pop event description programmatically.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "netlify-lambda": "^1.4.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thai Pangsakulyanont <org.yi.dttvb@gmail.com> (http://dt.in.th/)",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ]
+}
