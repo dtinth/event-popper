@@ -15,16 +15,34 @@ and
 
 This project is not affiliated with or endorsed by Event Pop. I just kinda
 reverse-engineered the HTTP requests to make it easier for developers (and
-outside contributors) to update the event description page, although they may
-not have access to Event Pop’s organizer system. USE IT AT YOUR OWN RISK. No
-support is provided, although contributions are welcome.
+outside contributors) to update the event description page, even if they don’t
+have access to Event Pop’s organizer system. Do not abuse, and USE IT AT YOUR
+OWN RISK. No support is provided, although contributions are welcome.
+
+## Preparation
+
+To use this you need to find your _organizer ID_, _event ID_ and _session ID_.
+
+1. **Sign in to Event Pop organizer account** and **go to an event dashboard.**
+   You should have the URL in this form:
+
+   ```
+   https://www.eventpop.me/organizers/<organizerId>/events/<eventId>-*
+   ```
+
+2. **Open your dev tools** and **extract the cookie called
+   `_stampmein_session`** from your browser. This is your _session ID_. Protect
+   this ID as anyone who has it can impersonate you!
 
 ## REST API
 
 Using a REST API is a useful and more secure method that offers protection of
-your session ID. (A session ID can be used to do _anything_ to every event the
-user has access to, while the REST API only allows updating the description of
-one event.)
+your _session ID_.
+
+If your session ID fell into a wrong hand, it can be used to do _anything_ to
+every event that you have access to. It can also be used to buy tickets on your
+behalf. This REST API only allows updating the description of a single event
+using an API key, hiding your session ID.
 
 1. **Deploy the API to Netlify** by clicking this button:
 
