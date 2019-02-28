@@ -15,7 +15,17 @@ your session ID. (A session ID can be used to do _anything_ to every event the
 user has access to, while the REST API only allows updating the description of
 one event)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dtinth/event-popper)
+1. Deploy the API to Netlify
+
+   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dtinth/event-popper)
+
+   In **Configure your site** step, enter:
+
+   - **API Key** — put in a random string to protect the endpoint
+   - **Event Pop Organizer ID** — obtain from organizer URL
+   - **Event Pop Event ID** — obtain from organizer URL
+   - **Event Pop Session ID** — obtain this from the browser cookie named
+     `_stampmein_session`
 
 ## Node.js API
 
@@ -30,3 +40,4 @@ An object with 3 properties:
 - `organizerId` (`number`) your organization ID
 - `eventId` (`number`) your event ID
 - `sessionId` (`string`) your event pop organizer session ID, get from cookie
+  named `_stampmein_session`

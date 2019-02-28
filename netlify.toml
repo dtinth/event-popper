@@ -4,7 +4,7 @@
   publish = "public"
 
 [template.environment]
-  API_KEY = "Lock down this API with an API key -- put in a random string here"
-  EVENTPOP_ORGANIZER_ID = "0"
-  EVENTPOP_USER_ID = "0"
-  EVENTPOP_SESSION_ID = "Obtain this from the browser cookie named `_stampmein_session`"
+  API_KEY = "API Key"
+  EVENTPOP_ORGANIZER_ID = "Event Pop Organizer ID"
+  EVENTPOP_EVENT_ID = "Event Pop Event ID"
+  EVENTPOP_SESSION_ID = "Event Pop Session ID"
