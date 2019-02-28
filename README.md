@@ -4,14 +4,20 @@ A Node.js package and a deployable REST API to update Event Pop event
 description programmatically.
 
 This can be useful for, e.g. continuously deploying an Event Pop description
-page from a Git repository.
+page from a Git repository. For example,
+[global diversity CFP day (Bangkok 2019)’s Event Pop page](https://www.eventpop.me/e/5302-global-diversity-cfp-day-bangkok-2019)
+was
+[generated using React](https://gitlab.com/dtinth/gdcd-2019-bangkok/blob/master/EventPop-Description.html)
+and
+[continuously deployed using GitLab CI](https://gitlab.com/dtinth/gdcd-2019-bangkok/blob/master/.gitlab-ci.yml).
 
 ## Disclaimer
 
 This project is not affiliated with or endorsed by Event Pop. I just kinda
-reverse-engineered the HTTP requests to make it easier for developers to update
-the description page. No support is provided, although contributions are
-welcome.
+reverse-engineered the HTTP requests to make it easier for developers (and
+outside contributors) to update the event description page, although they may
+not have access to Event Pop’s organizer system. USE IT AT YOUR OWN RISK. No
+support is provided, although contributions are welcome.
 
 ## REST API
 
