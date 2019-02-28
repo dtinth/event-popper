@@ -55,6 +55,8 @@ one event.)
 
 ## Node.js API
 
+_Note: This module is not published to npm yet._
+
 ### updateEventDescription(html, config)
 
 Updates an event’s description.
