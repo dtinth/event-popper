@@ -1,11 +1,11 @@
 # event-popper
 
-A Node.js package and a deployable REST API to update Event Pop event
+A Node.js package and a deployable REST API to update Eventpop event
 description programmatically.
 
-This can be useful for, e.g. continuously deploying an Event Pop description
+This can be useful for, e.g. continuously deploying an Eventpop description
 page from a Git repository. For example,
-[global diversity CFP day (Bangkok 2019)’s Event Pop page](https://www.eventpop.me/e/5302-global-diversity-cfp-day-bangkok-2019)
+[global diversity CFP day (Bangkok 2019)’s Eventpop page](https://www.eventpop.me/e/5302-global-diversity-cfp-day-bangkok-2019)
 was
 [generated using React](https://gitlab.com/dtinth/gdcd-2019-bangkok/blob/master/EventPop-Description.html)
 and
@@ -13,17 +13,17 @@ and
 
 ## Disclaimer
 
-This project is not affiliated with or endorsed by Event Pop. I just kinda
+This project is not affiliated with or endorsed by Eventpop. I just kinda
 reverse-engineered the HTTP requests to make it easier for developers (and
 outside contributors) to update the event description page, even if they don’t
-have access to Event Pop’s organizer system. Do not abuse, and USE IT AT YOUR
+have access to Eventpop’s organizer system. Do not abuse, and USE IT AT YOUR
 OWN RISK. No support is provided, although contributions are welcome.
 
 ## Preparation
 
 To use this you need to find your _organizer ID_, _event ID_ and _session ID_.
 
-1. **Sign in to Event Pop organizer account** and **go to an event dashboard.**
+1. **Sign in to Eventpop organizer account** and **go to an event dashboard.**
    You should have the URL in this form:
 
    ```
@@ -53,9 +53,9 @@ using an API key, hiding your session ID.
    - **API Key** — put in some random string here to protect the endpoint. You
      need this API key to call it. For example:
      `4122c643d4fc3af51fd9e42b6d59e6a9412bc0bd`
-   - **Event Pop Organizer ID** — obtain from organizer URL
-   - **Event Pop Event ID** — obtain from organizer URL
-   - **Event Pop Session ID** — obtain this from the browser cookie named
+   - **Eventpop Organizer ID** — obtain from organizer URL
+   - **Eventpop Event ID** — obtain from organizer URL
+   - **Eventpop Session ID** — obtain this from the browser cookie named
      `_stampmein_session`
 
 2. **Once deployed, you can call the API.** Here’s an example using
