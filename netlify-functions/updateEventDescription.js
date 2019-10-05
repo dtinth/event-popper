@@ -1,13 +1,13 @@
 const eventPopper = require('../index')
 const jwt = require('jsonwebtoken')
 
-exports.handler = async function(event, context, callback) {
+exports.handler = async function(event, context) {
   const { apiKey, description } = JSON.parse(event.body)
   if (!process.env.API_KEY) {
-    callback(null, {
+    return {
       statusCode: 500,
       body: JSON.stringify({ message: `API_KEY not setup` })
-    })
+    }
   }
   let organizerId = process.env.EVENTPOP_ORGANIZER_ID
   let eventId = process.env.EVENTPOP_EVENT_ID
