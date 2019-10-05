@@ -4,6 +4,7 @@
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
     "debug": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
     "verror": "^1.10.0"
   },
   "name": "event-popper",
@@ -11,7 +12,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
-    "netlify-lambda": "^1.4.2"
+    "netlify-lambda": "^1.6.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
