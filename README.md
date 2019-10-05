@@ -53,19 +53,37 @@ using an API key, hiding your session ID.
    - **API Key** — put in some random string here to protect the endpoint. You
      need this API key to call it. For example:
      `4122c643d4fc3af51fd9e42b6d59e6a9412bc0bd`
-   - **Eventpop Organizer ID** — obtain from organizer URL
-   - **Eventpop Event ID** — obtain from organizer URL
+   - **Eventpop Organizer ID** — obtain from organizer URL [optional]
+   - **Eventpop Event ID** — obtain from organizer URL [optional]
    - **Eventpop Session ID** — obtain this from the browser cookie named
      `_stampmein_session`
 
 2. **Once deployed, you can call the API.** Here’s an example using
    [HTTPie](https://httpie.org/):
 
-   ```
-   http post https://______.netlify.com/.netlify/functions/updateEventDescription \
-     apiKey=4122c643d4fc3af51fd9e42b6d59e6a9412bc0bd \
-     description=TEST
-   ```
+   - **Update event on the configured event** — just pass in the API key normally.
+
+      ```
+      http post https://______.netlify.com/.netlify/functions/updateEventDescription \
+        apiKey=4122c643d4fc3af51fd9e42b6d59e6a9412bc0bd \
+        description=TEST
+      ```
+
+      Use this method if you plan to use `event-popper` with just a single event.
+
+   - **Update event on a specific event** — generate a HS256 JWT with `eventId` claim use the `API_KEY` as a secret.
+
+     ![](./docs/images/jwt.png)
+
+     Then use the resulting JWT as an `apiKey`:
+
+      ```
+      http post https://______.netlify.com/.netlify/functions/updateEventDescription \
+        apiKey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJldmVudElkIjoiMTIzNCJ9.y3a5Dik9vLuNxIkyMRGUWIogELckfgLhT-k5GVE5Xuo \
+        description=TEST
+      ```
+
+      Use this method if you plan to use `event-popper` with multiple events.
 
 3. **After a while the session may expire.** You need to go to Netlify’s project
    **Settings** &rarr; **Build & deploy** &rarr; **Build environment variables**
