@@ -46,3 +46,6 @@ Icon
 config.json
 dist
 .sonarlint
+
+# Local Netlify folder
+.netlify
