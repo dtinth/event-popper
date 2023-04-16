@@ -41,12 +41,16 @@ async function updateEventDescription(html, config) {
     debug("Found authenticity_token", token);
 
     const patchResponse = await client
-      .patch(editorUrl, {
-        authenticity_token: token,
-        event_detail: {
-          description_th: html,
+      .patch(
+        editorUrl,
+        {
+          authenticity_token: token,
+          event_detail: {
+            description_th: html,
+          },
         },
-      })
+        { maxRedirects: 0 }
+      )
       .catch((e) => {
         throw new VError(e, "Cannot PATCH page_editor");
       });
