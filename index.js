@@ -21,7 +21,7 @@ async function updateEventDescription(html, config) {
   try {
     const client = axios.default.create({
       headers: {
-        cookie: `_stampmein_session=${config.sessionId}`,
+        cookie: `_eventpop_session=${config.sessionId}`,
       },
     });
     debug("Getting page editor");
