@@ -12,11 +12,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
-    "netlify-lambda": "^1.6.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "netlify-lambda build netlify-functions"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Thai Pangsakulyanont <org.yi.dttvb@gmail.com> (http://dt.in.th/)",
   "license": "MIT",
