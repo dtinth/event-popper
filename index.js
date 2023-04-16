@@ -49,7 +49,10 @@ async function updateEventDescription(html, config) {
             description_th: html,
           },
         },
-        { maxRedirects: 0 }
+        {
+          maxRedirects: 0,
+          validateStatus: (status) => status < 400,
+        }
       )
       .catch((e) => {
         throw new VError(e, "Cannot PATCH page_editor");
